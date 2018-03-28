@@ -31,6 +31,10 @@ Instalación de debian 9 e información del SO
 17) Nos preguntara accerca de una encuesta sobre los paquetes, seleccionamos "No" (a menos que la quiera hacer) y damos clic en "Continuar".
 18) A continuación apareceran una lista de paquetes adicionales que se pueden instalar (son opcionales) en mi caso selecciono "SSH server" que posiblemente sea usado más adelante y damos clic en "Continuar".
 19) Esperamos a que las configuraciones terminen (este proceso puede tardar un poco).
+20) A continuación se solicitará instalar GRUB boot debido a que es el único sistema operativo en el disco duro. Aceptamos la instalación presionando "Si" y damos clic en "Continuar".
+21) Seleccionamos el disco duro que aparecerá en la lista y damos clic en "Continuar" y el sistema continuará con las configuraciones.
+22) El sistema nos avisará que la instalación fue exitosa y damos clic en "Continuar" para reiniciar el sistema.
+21) Accedemos con el usuario que creamos y en el menú "Actividades" buscamos "Terminal", usamos los comandos uname -a, uname -r y otros para ver los datos del sistema (Ver imagen "datosDebian"). 
 
 
 
