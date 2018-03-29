@@ -36,6 +36,10 @@ Instalación de debian 9 e información del SO
 22) El sistema nos avisará que la instalación fue exitosa y damos clic en "Continuar" para reiniciar el sistema.
 21) Accedemos con el usuario que creamos y en el menú "Actividades" buscamos "Terminal", usamos los comandos uname -a, uname -r y otros para ver los datos del sistema (Ver imagen "datosDebian"). 
 
+Punto 5:
+1) Apagamos la máquina debian y en Virtualbox damos clic en la opción "Configuración", allí seleccionamos la opción "Red", seleccionamos "Adaptador 1" y cambiamos el campo "Conectado a" por "Adaptador puente", configuramos el puerto al cual se conectará (en mi caso WIFI) y damos clic en aceptar.  
+2) Iniciamos la máquina y abrimos una terminal, podemos ver la información de las interfaces con el comando "ip a", en este caso nuestra interfaz de interés es la enp0s3.
+3) Descargamos Putty de la página: https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html y lo instalamos (se hace esto porque mi anfitrión es windows). Ejecutamos Putty y en el campo "Host name" colocamos la ip de la interfaz enp0s3, damos clic en "Open" y al mensaje que nos aparecerá damos clic en "Si", por último escribimos nuestro usuario y password de la máquina debian. De este modo ya hemos realizado SSH a debian. Las imagenes de este proceso se encuentran anexadas.
 
 
 
