@@ -41,7 +41,9 @@ Punto 5:
 2) Iniciamos la máquina y abrimos una terminal, podemos ver la información de las interfaces con el comando "ip a", en este caso nuestra interfaz de interés es la enp0s3.
 3) Descargamos Putty de la página: https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html y lo instalamos (se hace esto porque mi anfitrión es windows). Ejecutamos Putty y en el campo "Host name" colocamos la ip de la interfaz enp0s3, damos clic en "Open" y al mensaje que nos aparecerá damos clic en "Si", por último escribimos nuestro usuario y password de la máquina debian. De este modo ya hemos realizado SSH a debian. Las imagenes de este proceso se encuentran anexadas.
 
-
+Punto 6:
+1) Para instalar git por medio de una terminal o usando SSH digitamos el comendo "apt-get install git". Es importante usar el usuario root ya que en mi caso mi usuario creado no tenia ciertos peremisos y no se podia instalar git desde ese usuario. Para acceder al root solo escribimos el comando "su" y escribimos el password de root. A continuación estaremos como root y podremos instalar git sin problemas.
+2) Para instalar tig escribimos el comendo "cd /tmp/" para elegir ese directorio como el que contendrá los archivos de tig. Conamos el repositorio que contiene tig usando el comando "git clone https://github.com/jonas/tig.git", adicionalmente podemos instalar el compilador de C haciendo uso de los comandos "cd tig", "apt-get install build-essential", "apt-get install libncurses5-dev libncursesw5-dev", "make", "make install".
 
 
 
