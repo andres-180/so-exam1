@@ -17,9 +17,7 @@ debemos acceder a: https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/MD5
 ![](Images/Validacion3.png)
 
 ![](Images/Validacion4.png)
-```console
-perez@debian: sudo apt
-```
+
 3) En el campo "Hash" pegamos el checksum obtenido en el paso 1, en nuestro caso es el codigo que esta al lado del campo "debian-9.4.0-amd64-netinst.iso"  
 4) Hacemos clic en verify y nos aparecerá un cuadro de dialogo confirmando que la imagen es correcta o lo contrario.
 
@@ -49,7 +47,13 @@ Instalación de debian 9 e información del SO
 20) A continuación se solicitará instalar GRUB boot debido a que es el único sistema operativo en el disco duro. Aceptamos la instalación presionando "Si" y damos clic en "Continuar".
 21) Seleccionamos el disco duro que aparecerá en la lista y damos clic en "Continuar" y el sistema continuará con las configuraciones.
 22) El sistema nos avisará que la instalación fue exitosa y damos clic en "Continuar" para reiniciar el sistema.
-21) Accedemos con el usuario que creamos y en el menú "Actividades" buscamos "Terminal", usamos los comandos uname -a, uname -r y otros para ver los datos del sistema.
+21) Accedemos con el usuario que creamos y en el menú "Actividades" buscamos "Terminal", usamos los comandos 
+
+```console
+operativos@debianA: uname -a
+operativos@debianA: uname -r
+```
+ y otros para ver los datos del sistema.
 
 ![](Images/datosDebian.PNG)
 
@@ -60,7 +64,11 @@ Punto 5:
 
 ![](Images/punto5Red2.PNG)
 
-2) Iniciamos la máquina y abrimos una terminal, podemos ver la información de las interfaces con el comando "ip a", en este caso nuestra interfaz de interés es la enp0s3.
+2) Iniciamos la máquina y abrimos una terminal, podemos ver la información de las interfaces con el comando 
+```console
+operativos@debianA: ip a
+```
+En este caso nuestra interfaz de interés es la enp0s3.
 3) Descargamos Putty de la página: https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html y lo instalamos (se hace esto porque mi anfitrión es windows). Ejecutamos Putty y en el campo "Host name" colocamos la ip de la interfaz enp0s3, 
 
 ![](Images/punto5Red3.PNG)
@@ -71,9 +79,44 @@ damos clic en "Open" y al mensaje que nos aparecerá damos clic en "Si", por úl
 ![](Images/punto5Red4.PNG)
 
 Punto 6:
-1) Para instalar git por medio de una terminal o usando SSH digitamos el comendo "apt-get install git". Es importante usar el usuario root ya que en mi caso mi usuario creado no tenia ciertos peremisos y no se podia instalar git desde ese usuario. Para acceder al root solo escribimos el comando "su" y escribimos el password de root. A continuación estaremos como root y podremos instalar git sin problemas.
-2) Para instalar tig escribimos el comendo "cd /tmp/" para elegir ese directorio como el que contendrá los archivos de tig. Conamos el repositorio que contiene tig usando el comando "git clone https://github.com/jonas/tig.git", adicionalmente podemos instalar el compilador de C haciendo uso de los comandos "cd tig", "apt-get install build-essential", "apt-get install libncurses5-dev libncursesw5-dev", "make", "make install".
+1) Para instalar git por medio de una terminal o usando SSH digitamos el comendo 
+```console
+operativos@debianA: apt-get install git
+```
+Es importante usar el usuario root ya que en mi caso mi usuario creado no tenia ciertos peremisos y no se podia instalar git desde ese usuario. Para acceder al root solo escribimos el comando 
+```console
+operativos@debianA: su
+```
+Y escribimos el password de root. A continuación estaremos como root y podremos instalar git sin problemas.
 
+
+![](Images/instalacionGit.PNG)
+
+2) Para instalar tig escribimos el comando 
+```console
+operativos@debianA: cd /tmp/
+```
+Para elegir ese directorio como el que contendrá los archivos de tig. Conamos el repositorio que contiene tig usando el comando
+```console
+operativos@debianA: git clone https://github.com/jonas/tig.git
+```
+Adicionalmente podemos instalar el compilador de C haciendo uso de los comandos 
+```console
+operativos@debianA: cd tig
+operativos@debianA: apt-get install build-essential
+operativos@debianA: apt-get install libncurses5-dev libncursesw5-dev
+operativos@debianA: make
+operativos@debianA: make install
+```
+
+![](Images/instalacionTig.PNG)
+
+La evidencia de los commits se ve a continuación
+
+
+![](Images/tigExamen.PNG)
+
+Punto 7:
 
 
 
