@@ -117,8 +117,19 @@ La evidencia de los commits se ve a continuación
 ![](Images/tigExamen.PNG)
 
 Punto 7:
+1) Una vez apagada la máquina ejecutamos Virtualbox y damos clic en "Archivo" y luego en "Exportar servicio virtualizado" y alli nos aparecerá la máquina debian, la elegimos y damos clic en "Next".
 
+![](Images/punto6_1.PNG)
 
+2) Elegimos la ubicación donde la vamos a guardar y damos clic en "Next".
+
+![](Images/punto6_2.PNG)
+
+3) Nos apareceran algunos datos de la máquina y damos clic en "Exportar", se comenzará con este proceso que puede tardar unos minutos.
+
+![](Images/punto6_3.PNG)
+
+Al final tendremos un archivo "ova" que repŕesenta la máquina exportada.
 
 
 
