@@ -5,15 +5,25 @@ Código: A00056964
    
 Punto 3:   
 Para validar la imagen    
-1) Una vez descargada (el link de descarga es: https://www.debian.org/distrib/netinst#smallcd), debemos acceder a: https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/MD5SUMS para poder ver el checksum de lo que hemos descargado.   
-2) Descargamos el programa que obtendra el checksum de la imagen descargada de: http://download.cnet.com/MD5-SHA-Checksum-Utility/3001-2092_4-10911445.html lo ejecutamos y elegimos la imagen de debian que hemos descargado en el campo "File". El programa automáticamente generará el MD5 y los SHA (utilizados para encriptar). 
+1) Una vez descargada (el link de descarga es: https://www.debian.org/distrib/netinst#smallcd), 
+debemos acceder a: https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/MD5SUMS para poder ver el checksum de lo que hemos descargado.   
+
 ![](Images/Validacion1.png)
 
+![](Images/Validacion2.png)
+
+2) Descargamos el programa que obtendra el checksum de la imagen descargada, lo obtenemos de: http://download.cnet.com/MD5-SHA-Checksum-Utility/3001-2092_4-10911445.html lo ejecutamos y elegimos la imagen de debian que hemos descargado en el campo "File". El programa automáticamente generará el MD5 y los SHA (utilizados para encriptar). 
+
+![](Images/Validacion3.png)
+
+![](Images/Validacion4.png)
 ```console
 perez@debian: sudo apt
 ```
 3) En el campo "Hash" pegamos el checksum obtenido en el paso 1, en nuestro caso es el codigo que esta al lado del campo "debian-9.4.0-amd64-netinst.iso"  
 4) Hacemos clic en verify y nos aparecerá un cuadro de dialogo confirmando que la imagen es correcta o lo contrario.
+
+![](Images/Validacion5.png)
 
 Punto 4:
 Instalación de debian 9 e información del SO
@@ -39,12 +49,26 @@ Instalación de debian 9 e información del SO
 20) A continuación se solicitará instalar GRUB boot debido a que es el único sistema operativo en el disco duro. Aceptamos la instalación presionando "Si" y damos clic en "Continuar".
 21) Seleccionamos el disco duro que aparecerá en la lista y damos clic en "Continuar" y el sistema continuará con las configuraciones.
 22) El sistema nos avisará que la instalación fue exitosa y damos clic en "Continuar" para reiniciar el sistema.
-21) Accedemos con el usuario que creamos y en el menú "Actividades" buscamos "Terminal", usamos los comandos uname -a, uname -r y otros para ver los datos del sistema (Ver imagen "datosDebian"). 
+21) Accedemos con el usuario que creamos y en el menú "Actividades" buscamos "Terminal", usamos los comandos uname -a, uname -r y otros para ver los datos del sistema.
+
+![](Images/datosDebian.PNG)
 
 Punto 5:
 1) Apagamos la máquina debian y en Virtualbox damos clic en la opción "Configuración", allí seleccionamos la opción "Red", seleccionamos "Adaptador 1" y cambiamos el campo "Conectado a" por "Adaptador puente", configuramos el puerto al cual se conectará (en mi caso WIFI) y damos clic en aceptar.  
+
+![](Images/punto5Red1.PNG)
+
+![](Images/punto5Red2.PNG)
+
 2) Iniciamos la máquina y abrimos una terminal, podemos ver la información de las interfaces con el comando "ip a", en este caso nuestra interfaz de interés es la enp0s3.
-3) Descargamos Putty de la página: https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html y lo instalamos (se hace esto porque mi anfitrión es windows). Ejecutamos Putty y en el campo "Host name" colocamos la ip de la interfaz enp0s3, damos clic en "Open" y al mensaje que nos aparecerá damos clic en "Si", por último escribimos nuestro usuario y password de la máquina debian. De este modo ya hemos realizado SSH a debian. Las imagenes de este proceso se encuentran anexadas.
+3) Descargamos Putty de la página: https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html y lo instalamos (se hace esto porque mi anfitrión es windows). Ejecutamos Putty y en el campo "Host name" colocamos la ip de la interfaz enp0s3, 
+
+![](Images/punto5Red3.PNG)
+
+damos clic en "Open" y al mensaje que nos aparecerá damos clic en "Si", por último escribimos nuestro usuario y password de la máquina debian. De este modo ya hemos realizado SSH a debian.
+
+
+![](Images/punto5Red4.PNG)
 
 Punto 6:
 1) Para instalar git por medio de una terminal o usando SSH digitamos el comendo "apt-get install git". Es importante usar el usuario root ya que en mi caso mi usuario creado no tenia ciertos peremisos y no se podia instalar git desde ese usuario. Para acceder al root solo escribimos el comando "su" y escribimos el password de root. A continuación estaremos como root y podremos instalar git sin problemas.
