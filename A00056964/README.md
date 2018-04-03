@@ -130,6 +130,10 @@ Punto 7:
 ![](Images/punto6_3.PNG)
 
 Al final tendremos un archivo "ova" que repŕesenta la máquina exportada.
+4) Para importar la máquina en la sala 202C ingresamos a virtualbox y damos clic en la pestaña "Archivo" y elegimos la opción "Importar servicio virtualizado".
+5) Buscamos la ubicación del archivo a importar (la máquina) y damos clic en "Abrir".
+6) A continuación nos aparecerá la ruta de la debian y damos clic en "Siguiente".
+
 
 
 
