@@ -160,6 +160,9 @@ Al final tendremos un archivo "ova" que repŕesenta la máquina exportada.
 
 Punto 8:
 
+![](Images/comparacion.PNG)
 
+Punto 9:
+url: https://github.com/andres-180/so-exam1 
 
 
