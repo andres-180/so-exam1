@@ -158,6 +158,8 @@ Al final tendremos un archivo "ova" que repŕesenta la máquina exportada.
 ![](Images/punto7_11.png)
 
 
+Punto 8:
+
 
 
 
